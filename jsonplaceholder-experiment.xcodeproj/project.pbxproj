@@ -8,8 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		0DD577582233F1EA00186A78 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DD577572233F1EA00186A78 /* AppDelegate.swift */; };
-		0DD5775A2233F1EA00186A78 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DD577592233F1EA00186A78 /* ViewController.swift */; };
-		0DD5775D2233F1EA00186A78 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0DD5775B2233F1EA00186A78 /* Main.storyboard */; };
 		0DD5775F2233F1EB00186A78 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0DD5775E2233F1EB00186A78 /* Assets.xcassets */; };
 		0DD577622233F1EB00186A78 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0DD577602233F1EB00186A78 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
@@ -17,8 +15,6 @@
 /* Begin PBXFileReference section */
 		0DD577542233F1EA00186A78 /* jsonplaceholder-experiment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "jsonplaceholder-experiment.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0DD577572233F1EA00186A78 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		0DD577592233F1EA00186A78 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		0DD5775C2233F1EA00186A78 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0DD5775E2233F1EB00186A78 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0DD577612233F1EB00186A78 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0DD577632233F1EB00186A78 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -35,6 +31,68 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0D93FD4D2233F2A9006C00F5 /* Delegates */ = {
+			isa = PBXGroup;
+			children = (
+				0DD577572233F1EA00186A78 /* AppDelegate.swift */,
+			);
+			path = Delegates;
+			sourceTree = "<group>";
+		};
+		0D93FD4E2233F2C7006C00F5 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		0D93FD4F2233F2CD006C00F5 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		0D93FD502233F2DB006C00F5 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		0D93FD512233F2E0006C00F5 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				0D93FD542233F302006C00F5 /* Media */,
+				0D93FD532233F2ED006C00F5 /* Storyboard */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		0D93FD522233F2E4006C00F5 /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				0DD577632233F1EB00186A78 /* Info.plist */,
+			);
+			path = Support;
+			sourceTree = "<group>";
+		};
+		0D93FD532233F2ED006C00F5 /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				0DD577602233F1EB00186A78 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		0D93FD542233F302006C00F5 /* Media */ = {
+			isa = PBXGroup;
+			children = (
+				0DD5775E2233F1EB00186A78 /* Assets.xcassets */,
+			);
+			path = Media;
+			sourceTree = "<group>";
+		};
 		0DD5774B2233F1EA00186A78 = {
 			isa = PBXGroup;
 			children = (
@@ -54,12 +112,12 @@
 		0DD577562233F1EA00186A78 /* jsonplaceholder-experiment */ = {
 			isa = PBXGroup;
 			children = (
-				0DD577572233F1EA00186A78 /* AppDelegate.swift */,
-				0DD577592233F1EA00186A78 /* ViewController.swift */,
-				0DD5775B2233F1EA00186A78 /* Main.storyboard */,
-				0DD5775E2233F1EB00186A78 /* Assets.xcassets */,
-				0DD577602233F1EB00186A78 /* LaunchScreen.storyboard */,
-				0DD577632233F1EB00186A78 /* Info.plist */,
+				0D93FD4D2233F2A9006C00F5 /* Delegates */,
+				0D93FD4F2233F2CD006C00F5 /* Models */,
+				0D93FD4E2233F2C7006C00F5 /* Modules */,
+				0D93FD502233F2DB006C00F5 /* Protocols */,
+				0D93FD512233F2E0006C00F5 /* Resources */,
+				0D93FD522233F2E4006C00F5 /* Support */,
 			);
 			path = "jsonplaceholder-experiment";
 			sourceTree = "<group>";
@@ -124,7 +182,6 @@
 			files = (
 				0DD577622233F1EB00186A78 /* LaunchScreen.storyboard in Resources */,
 				0DD5775F2233F1EB00186A78 /* Assets.xcassets in Resources */,
-				0DD5775D2233F1EA00186A78 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -135,7 +192,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0DD5775A2233F1EA00186A78 /* ViewController.swift in Sources */,
 				0DD577582233F1EA00186A78 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -143,14 +199,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		0DD5775B2233F1EA00186A78 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				0DD5775C2233F1EA00186A78 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		0DD577602233F1EB00186A78 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -284,7 +332,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = E6K2WVN974;
-				INFOPLIST_FILE = "jsonplaceholder-experiment/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/jsonplaceholder-experiment/Support/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -292,7 +341,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.mertahmetgunes.jsonplaceholder-experiment";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -302,7 +351,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = E6K2WVN974;
-				INFOPLIST_FILE = "jsonplaceholder-experiment/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/jsonplaceholder-experiment/Support/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -310,7 +360,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.mertahmetgunes.jsonplaceholder-experiment";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
