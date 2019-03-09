@@ -12,6 +12,13 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 	var window: UIWindow?
 	
+	private let rootCoordinator: RootCoordinator
+	
+	override init() {
+		self.rootCoordinator = RootCoordinator()
+		super.init()
+	}
+	
 	func application(_ application: UIApplication,
 					 didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
 		initializeApplication()
@@ -23,7 +30,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 private extension AppDelegate {
 	func initializeApplication() {
 		let window = UIWindow(frame: UIScreen.main.bounds)
-		window.rootViewController = UIViewController()
+		window.rootViewController = rootCoordinator.viewController
 		window.makeKeyAndVisible()
 		
 		self.window = window

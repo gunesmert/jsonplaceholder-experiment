@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0D93FD562233F5CA006C00F5 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D93FD552233F5CA006C00F5 /* Coordinator.swift */; };
+		0D93FD592233F5FF006C00F5 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D93FD582233F5FF006C00F5 /* BaseViewController.swift */; };
+		0D93FD622233F69A006C00F5 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D93FD612233F69A006C00F5 /* RootViewController.swift */; };
+		0D93FD642233F6DF006C00F5 /* RootCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D93FD632233F6DF006C00F5 /* RootCoordinator.swift */; };
+		0D93FD682233F785006C00F5 /* MainNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D93FD672233F785006C00F5 /* MainNavigationController.swift */; };
+		0D93FD6A2233F79C006C00F5 /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D93FD692233F79C006C00F5 /* MainCoordinator.swift */; };
+		0D93FD6C2233F7D3006C00F5 /* BaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D93FD6B2233F7D3006C00F5 /* BaseNavigationController.swift */; };
 		0DD577582233F1EA00186A78 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DD577572233F1EA00186A78 /* AppDelegate.swift */; };
 		0DD5775F2233F1EB00186A78 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0DD5775E2233F1EB00186A78 /* Assets.xcassets */; };
 		0DD577622233F1EB00186A78 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0DD577602233F1EB00186A78 /* LaunchScreen.storyboard */; };
@@ -14,6 +21,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0D93FD552233F5CA006C00F5 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		0D93FD582233F5FF006C00F5 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		0D93FD612233F69A006C00F5 /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
+		0D93FD632233F6DF006C00F5 /* RootCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootCoordinator.swift; sourceTree = "<group>"; };
+		0D93FD672233F785006C00F5 /* MainNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainNavigationController.swift; sourceTree = "<group>"; };
+		0D93FD692233F79C006C00F5 /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
+		0D93FD6B2233F7D3006C00F5 /* BaseNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNavigationController.swift; sourceTree = "<group>"; };
 		0DD577542233F1EA00186A78 /* jsonplaceholder-experiment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "jsonplaceholder-experiment.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0DD577572233F1EA00186A78 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0DD5775E2233F1EB00186A78 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -47,6 +61,12 @@
 		0D93FD4E2233F2C7006C00F5 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				0D93FD5B2233F62C006C00F5 /* AlbumList */,
+				0D93FD572233F5EF006C00F5 /* Base */,
+				0D93FD5E2233F65D006C00F5 /* Main */,
+				0D93FD5D2233F657006C00F5 /* PhotoDetail */,
+				0D93FD5C2233F650006C00F5 /* PhotoList */,
+				0D93FD5A2233F615006C00F5 /* Root */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -61,6 +81,7 @@
 		0D93FD502233F2DB006C00F5 /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
+				0D93FD552233F5CA006C00F5 /* Coordinator.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -96,6 +117,86 @@
 				0DD5775E2233F1EB00186A78 /* Assets.xcassets */,
 			);
 			path = Media;
+			sourceTree = "<group>";
+		};
+		0D93FD572233F5EF006C00F5 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				0D93FD582233F5FF006C00F5 /* BaseViewController.swift */,
+				0D93FD6B2233F7D3006C00F5 /* BaseNavigationController.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		0D93FD5A2233F615006C00F5 /* Root */ = {
+			isa = PBXGroup;
+			children = (
+				0D93FD5F2233F666006C00F5 /* Controller */,
+				0D93FD602233F66F006C00F5 /* Coordinator */,
+			);
+			path = Root;
+			sourceTree = "<group>";
+		};
+		0D93FD5B2233F62C006C00F5 /* AlbumList */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = AlbumList;
+			sourceTree = "<group>";
+		};
+		0D93FD5C2233F650006C00F5 /* PhotoList */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = PhotoList;
+			sourceTree = "<group>";
+		};
+		0D93FD5D2233F657006C00F5 /* PhotoDetail */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = PhotoDetail;
+			sourceTree = "<group>";
+		};
+		0D93FD5E2233F65D006C00F5 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				0D93FD652233F768006C00F5 /* Controller */,
+				0D93FD662233F76D006C00F5 /* Coordinator */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		0D93FD5F2233F666006C00F5 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				0D93FD612233F69A006C00F5 /* RootViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		0D93FD602233F66F006C00F5 /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				0D93FD632233F6DF006C00F5 /* RootCoordinator.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		0D93FD652233F768006C00F5 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				0D93FD672233F785006C00F5 /* MainNavigationController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		0D93FD662233F76D006C00F5 /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				0D93FD692233F79C006C00F5 /* MainCoordinator.swift */,
+			);
+			path = Coordinator;
 			sourceTree = "<group>";
 		};
 		0DD5774B2233F1EA00186A78 = {
@@ -143,7 +244,6 @@
 				79FED56D15989E35BF6149A9 /* Pods-jsonplaceholder-experiment.debug.xcconfig */,
 				C5E202416B51B6EF922EF2FD /* Pods-jsonplaceholder-experiment.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -272,7 +372,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0D93FD6C2233F7D3006C00F5 /* BaseNavigationController.swift in Sources */,
+				0D93FD562233F5CA006C00F5 /* Coordinator.swift in Sources */,
+				0D93FD6A2233F79C006C00F5 /* MainCoordinator.swift in Sources */,
 				0DD577582233F1EA00186A78 /* AppDelegate.swift in Sources */,
+				0D93FD642233F6DF006C00F5 /* RootCoordinator.swift in Sources */,
+				0D93FD682233F785006C00F5 /* MainNavigationController.swift in Sources */,
+				0D93FD622233F69A006C00F5 /* RootViewController.swift in Sources */,
+				0D93FD592233F5FF006C00F5 /* BaseViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
