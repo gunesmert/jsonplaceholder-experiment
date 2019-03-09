@@ -11,7 +11,7 @@ import SnapKit
 
 final class RootCoordinator: Coordinator {
 	private let repository: Repository
-	private let mainCoordinator = MainCoordinator()
+	private lazy var mainCoordinator = MainCoordinator(with: repository)
 	
 	lazy private(set) var viewController: UIViewController = {
 		return RootViewController()

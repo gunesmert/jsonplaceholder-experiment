@@ -9,18 +9,25 @@
 import UIKit
 
 final class MainCoordinator: Coordinator {
+	private let repository: Repository
+	
 	lazy private(set) var viewController: UIViewController = {
 		return navigationController
 	}()
 	
 	private lazy var navigationController: MainNavigationController = {
-		let controller = MainNavigationController(rootViewController: rootViewController)
+		let controller = MainNavigationController(rootViewController: albumsViewController)
 		return controller
 	}()
 	
-	private lazy var rootViewController: UIViewController = {
-		let controller = UIViewController()
-		controller.view.backgroundColor = UIColor.red
+	private lazy var albumsViewController: AlbumsViewController = {
+		let viewModel = DefaultAlbumsViewModel(with: repository)
+		let controller = AlbumsViewController(viewModel: viewModel)
 		return controller
 	}()
+	
+	// MARK: - Constructors
+	init(with repository: Repository) {
+		self.repository = repository
+	}
 }
