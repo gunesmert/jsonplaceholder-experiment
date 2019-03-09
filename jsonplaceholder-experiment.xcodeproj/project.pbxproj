@@ -14,6 +14,18 @@
 		0D93FD682233F785006C00F5 /* MainNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D93FD672233F785006C00F5 /* MainNavigationController.swift */; };
 		0D93FD6A2233F79C006C00F5 /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D93FD692233F79C006C00F5 /* MainCoordinator.swift */; };
 		0D93FD6C2233F7D3006C00F5 /* BaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D93FD6B2233F7D3006C00F5 /* BaseNavigationController.swift */; };
+		0D93FD702233FA94006C00F5 /* NetworkClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D93FD6F2233FA94006C00F5 /* NetworkClient.swift */; };
+		0D93FD762233FAFF006C00F5 /* APIEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D93FD752233FAFF006C00F5 /* APIEndpoint.swift */; };
+		0D93FD782233FB2E006C00F5 /* APIAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D93FD772233FB2E006C00F5 /* APIAdapter.swift */; };
+		0D93FD7B2233FB64006C00F5 /* NetworkHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D93FD7A2233FB64006C00F5 /* NetworkHelpers.swift */; };
+		0D93FD7D2233FB96006C00F5 /* NetworkClientError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D93FD7C2233FB96006C00F5 /* NetworkClientError.swift */; };
+		0D93FD7F2233FBD0006C00F5 /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D93FD7E2233FBD0006C00F5 /* APIError.swift */; };
+		0D93FD842233FE59006C00F5 /* JSONDecoderExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D93FD832233FE59006C00F5 /* JSONDecoderExtensions.swift */; };
+		0D93FD86223400AB006C00F5 /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D93FD85223400AB006C00F5 /* Repository.swift */; };
+		0D93FD88223400E3006C00F5 /* Album.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D93FD87223400E3006C00F5 /* Album.swift */; };
+		0D93FD8A2234015D006C00F5 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D93FD892234015D006C00F5 /* APIClient.swift */; };
+		0D93FD8C223404F8006C00F5 /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D93FD8B223404F8006C00F5 /* Photo.swift */; };
+		0D93FD8E22340596006C00F5 /* MaterializedExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D93FD8D22340596006C00F5 /* MaterializedExtensions.swift */; };
 		0DD577582233F1EA00186A78 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DD577572233F1EA00186A78 /* AppDelegate.swift */; };
 		0DD5775F2233F1EB00186A78 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0DD5775E2233F1EB00186A78 /* Assets.xcassets */; };
 		0DD577622233F1EB00186A78 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0DD577602233F1EB00186A78 /* LaunchScreen.storyboard */; };
@@ -28,6 +40,18 @@
 		0D93FD672233F785006C00F5 /* MainNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainNavigationController.swift; sourceTree = "<group>"; };
 		0D93FD692233F79C006C00F5 /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
 		0D93FD6B2233F7D3006C00F5 /* BaseNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNavigationController.swift; sourceTree = "<group>"; };
+		0D93FD6F2233FA94006C00F5 /* NetworkClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkClient.swift; sourceTree = "<group>"; };
+		0D93FD752233FAFF006C00F5 /* APIEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIEndpoint.swift; sourceTree = "<group>"; };
+		0D93FD772233FB2E006C00F5 /* APIAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIAdapter.swift; sourceTree = "<group>"; };
+		0D93FD7A2233FB64006C00F5 /* NetworkHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkHelpers.swift; sourceTree = "<group>"; };
+		0D93FD7C2233FB96006C00F5 /* NetworkClientError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkClientError.swift; sourceTree = "<group>"; };
+		0D93FD7E2233FBD0006C00F5 /* APIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
+		0D93FD832233FE59006C00F5 /* JSONDecoderExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONDecoderExtensions.swift; sourceTree = "<group>"; };
+		0D93FD85223400AB006C00F5 /* Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
+		0D93FD87223400E3006C00F5 /* Album.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Album.swift; sourceTree = "<group>"; };
+		0D93FD892234015D006C00F5 /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
+		0D93FD8B223404F8006C00F5 /* Photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
+		0D93FD8D22340596006C00F5 /* MaterializedExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaterializedExtensions.swift; sourceTree = "<group>"; };
 		0DD577542233F1EA00186A78 /* jsonplaceholder-experiment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "jsonplaceholder-experiment.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0DD577572233F1EA00186A78 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0DD5775E2233F1EB00186A78 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -74,6 +98,8 @@
 		0D93FD4F2233F2CD006C00F5 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				0D93FD87223400E3006C00F5 /* Album.swift */,
+				0D93FD8B223404F8006C00F5 /* Photo.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -199,6 +225,70 @@
 			path = Coordinator;
 			sourceTree = "<group>";
 		};
+		0D93FD6D2233FA7E006C00F5 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				0D93FD6E2233FA87006C00F5 /* Client */,
+				0D93FD712233FAAB006C00F5 /* Error */,
+				0D93FD732233FAC4006C00F5 /* Helpers */,
+				0D93FD722233FAAF006C00F5 /* Protocols */,
+				0D93FD742233FACA006C00F5 /* Repository */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		0D93FD6E2233FA87006C00F5 /* Client */ = {
+			isa = PBXGroup;
+			children = (
+				0D93FD892234015D006C00F5 /* APIClient.swift */,
+				0D93FD6F2233FA94006C00F5 /* NetworkClient.swift */,
+			);
+			path = Client;
+			sourceTree = "<group>";
+		};
+		0D93FD712233FAAB006C00F5 /* Error */ = {
+			isa = PBXGroup;
+			children = (
+				0D93FD7E2233FBD0006C00F5 /* APIError.swift */,
+				0D93FD7C2233FB96006C00F5 /* NetworkClientError.swift */,
+			);
+			path = Error;
+			sourceTree = "<group>";
+		};
+		0D93FD722233FAAF006C00F5 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				0D93FD772233FB2E006C00F5 /* APIAdapter.swift */,
+				0D93FD752233FAFF006C00F5 /* APIEndpoint.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		0D93FD732233FAC4006C00F5 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				0D93FD7A2233FB64006C00F5 /* NetworkHelpers.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		0D93FD742233FACA006C00F5 /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				0D93FD85223400AB006C00F5 /* Repository.swift */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		0D93FD802233FC43006C00F5 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				0D93FD832233FE59006C00F5 /* JSONDecoderExtensions.swift */,
+				0D93FD8D22340596006C00F5 /* MaterializedExtensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		0DD5774B2233F1EA00186A78 = {
 			isa = PBXGroup;
 			children = (
@@ -221,10 +311,12 @@
 			isa = PBXGroup;
 			children = (
 				0D93FD4D2233F2A9006C00F5 /* Delegates */,
+				0D93FD802233FC43006C00F5 /* Extensions */,
 				0D93FD4F2233F2CD006C00F5 /* Models */,
 				0D93FD4E2233F2C7006C00F5 /* Modules */,
 				0D93FD502233F2DB006C00F5 /* Protocols */,
 				0D93FD512233F2E0006C00F5 /* Resources */,
+				0D93FD6D2233FA7E006C00F5 /* Service */,
 				0D93FD522233F2E4006C00F5 /* Support */,
 			);
 			path = "jsonplaceholder-experiment";
@@ -372,14 +464,26 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0D93FD7B2233FB64006C00F5 /* NetworkHelpers.swift in Sources */,
+				0D93FD842233FE59006C00F5 /* JSONDecoderExtensions.swift in Sources */,
 				0D93FD6C2233F7D3006C00F5 /* BaseNavigationController.swift in Sources */,
+				0D93FD88223400E3006C00F5 /* Album.swift in Sources */,
 				0D93FD562233F5CA006C00F5 /* Coordinator.swift in Sources */,
 				0D93FD6A2233F79C006C00F5 /* MainCoordinator.swift in Sources */,
 				0DD577582233F1EA00186A78 /* AppDelegate.swift in Sources */,
+				0D93FD782233FB2E006C00F5 /* APIAdapter.swift in Sources */,
 				0D93FD642233F6DF006C00F5 /* RootCoordinator.swift in Sources */,
+				0D93FD702233FA94006C00F5 /* NetworkClient.swift in Sources */,
 				0D93FD682233F785006C00F5 /* MainNavigationController.swift in Sources */,
 				0D93FD622233F69A006C00F5 /* RootViewController.swift in Sources */,
+				0D93FD8C223404F8006C00F5 /* Photo.swift in Sources */,
+				0D93FD86223400AB006C00F5 /* Repository.swift in Sources */,
+				0D93FD8E22340596006C00F5 /* MaterializedExtensions.swift in Sources */,
+				0D93FD7D2233FB96006C00F5 /* NetworkClientError.swift in Sources */,
 				0D93FD592233F5FF006C00F5 /* BaseViewController.swift in Sources */,
+				0D93FD762233FAFF006C00F5 /* APIEndpoint.swift in Sources */,
+				0D93FD7F2233FBD0006C00F5 /* APIError.swift in Sources */,
+				0D93FD8A2234015D006C00F5 /* APIClient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -526,6 +630,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				OTHER_SWIFT_FLAGS = "$(inherited) -D COCOAPODS -DDEBUG";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.mertahmetgunes.jsonplaceholder-experiment";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
@@ -546,6 +651,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				OTHER_SWIFT_FLAGS = "$(inherited) -D COCOAPODS -DRELEASE";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.mertahmetgunes.jsonplaceholder-experiment";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;

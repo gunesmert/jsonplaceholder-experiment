@@ -15,7 +15,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 	private let rootCoordinator: RootCoordinator
 	
 	override init() {
-		self.rootCoordinator = RootCoordinator()
+		let urlString = "https://jsonplaceholder.typicode.com"
+		let networkClient = DefaultNetworkClient(with: urlString)
+		let apiClient = DefaultAPIClient(networkClient: networkClient)
+		let repository = DefaultRepository(with: apiClient)
+		
+		self.rootCoordinator = RootCoordinator(with: repository)
 		super.init()
 	}
 	
@@ -32,7 +37,6 @@ private extension AppDelegate {
 		let window = UIWindow(frame: UIScreen.main.bounds)
 		window.rootViewController = rootCoordinator.viewController
 		window.makeKeyAndVisible()
-		
 		self.window = window
 	}
 }

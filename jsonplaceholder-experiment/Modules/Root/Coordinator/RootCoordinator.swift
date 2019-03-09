@@ -10,6 +10,7 @@ import UIKit
 import SnapKit
 
 final class RootCoordinator: Coordinator {
+	private let repository: Repository
 	private let mainCoordinator = MainCoordinator()
 	
 	lazy private(set) var viewController: UIViewController = {
@@ -17,7 +18,8 @@ final class RootCoordinator: Coordinator {
 	}()
 	
 	// MARK: - Constructors
-	init() {
+	init(with repository: Repository) {
+		self.repository = repository
 		activateMainCoordinator()
 	}
 	
