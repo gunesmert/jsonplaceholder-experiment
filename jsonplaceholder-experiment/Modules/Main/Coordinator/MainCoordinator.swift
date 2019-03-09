@@ -22,6 +22,7 @@ final class MainCoordinator: Coordinator {
 	
 	private lazy var albumsViewController: AlbumsViewController = {
 		let viewModel = DefaultAlbumsViewModel(with: repository)
+		viewModel.delegate = self
 		let controller = AlbumsViewController(viewModel: viewModel)
 		return controller
 	}()
@@ -29,5 +30,17 @@ final class MainCoordinator: Coordinator {
 	// MARK: - Constructors
 	init(with repository: Repository) {
 		self.repository = repository
+	}
+}
+
+// MARK: - AlbumsViewModelDelegate
+extension MainCoordinator: AlbumsViewModelDelegate {
+	func albumsModelView(_ viewModel: AlbumsViewModel,
+						 didTrigger action: AlbumsViewModelDelegateAction) {
+		switch action {
+		case .didSelectAlbum:
+			// TODO: Open Photos
+			break
+		}
 	}
 }

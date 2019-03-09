@@ -20,4 +20,10 @@ class BaseViewController: UIViewController {
 	init() {
 		super.init(nibName: nil, bundle: nil)
 	}
+	
+	// MARK: - View Lifecycle
+	override func loadView() {
+		super.loadView()
+		view.backgroundColor = ColorPalette.Primary.background
+	}
 }
