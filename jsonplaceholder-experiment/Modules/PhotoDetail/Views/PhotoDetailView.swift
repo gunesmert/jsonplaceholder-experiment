@@ -13,6 +13,9 @@ import Kingfisher
 final class PhotoDetailView: UIView {
 	private lazy var imageView: UIImageView = {
 		let imageView = UIImageView()
+		imageView.backgroundColor = ColorPalette.Secondary.background
+		imageView.layer.cornerRadius = Constants.defaultCornerRadius
+		imageView.layer.masksToBounds = true
 		return imageView
 	}()
 	

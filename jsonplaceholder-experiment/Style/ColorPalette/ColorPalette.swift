@@ -10,12 +10,13 @@ import UIKit
 
 public struct ColorPalette {
 	public struct Primary {
-		public static let tint = UIColor.tropicalRainForest
-		public static let background = UIColor.concrete
+		public static let tint = UIColor.paris
+		public static let background = UIColor.seashell
 	}
 	
 	public struct Secondary {
-		public static let tint = UIColor.observatory
+		public static let tint = UIColor.mediumPersianBlue
+		public static let background = UIColor.loblolly
 	}
 }
 
@@ -40,15 +41,19 @@ private extension UIColor {
 	Link: https://sipapp.io
 	*/
 	
-	static var observatory: UIColor {
-		return UIColor(hexString: "#008C72")
+	static var paris: UIColor {
+		return UIColor(hexString: "#2F2859")
 	}
 	
-	static var tropicalRainForest: UIColor {
-		return UIColor(hexString: "#037368")
+	static var mediumPersianBlue: UIColor {
+		return UIColor(hexString: "#0D669E")
 	}
 	
-	static var concrete: UIColor {
-		return UIColor(hexString: "#F4F2F5")
+	static var seashell: UIColor {
+		return UIColor(hexString: "#F2F2F2")
+	}
+	
+	static var loblolly: UIColor {
+		return UIColor(hexString: "#C1C8CC")
 	}
 }

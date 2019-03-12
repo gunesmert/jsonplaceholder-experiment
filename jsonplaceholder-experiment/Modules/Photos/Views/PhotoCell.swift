@@ -22,6 +22,9 @@ struct PhotoCellTextAttributes {
 final class PhotoCell: UITableViewCell {
 	private lazy var thumbnailImageView: UIImageView = {
 		let imageView = UIImageView()
+		imageView.backgroundColor = ColorPalette.Secondary.background
+		imageView.layer.cornerRadius = Constants.defaultCornerRadius
+		imageView.layer.masksToBounds = true
 		return imageView
 	}()
 	
@@ -79,5 +82,9 @@ extension PhotoCell {
 		
 		guard let url = URL(string: photo.thumbnailUrl) else { return }
 		thumbnailImageView.kf.setImage(with: url)
+	}
+	
+	func cancelDownloadIfNeeded() {
+		thumbnailImageView.kf.cancelDownloadTask()
 	}
 }

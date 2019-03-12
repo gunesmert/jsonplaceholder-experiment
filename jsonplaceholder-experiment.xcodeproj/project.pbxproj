@@ -149,7 +149,6 @@
 		0D93FD512233F2E0006C00F5 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				0D93FDA82234656F006C00F5 /* Font */,
 				0D93FD542233F302006C00F5 /* Media */,
 				0D93FD532233F2ED006C00F5 /* Storyboard */,
 			);
@@ -393,13 +392,6 @@
 				0D93FDA422343598006C00F5 /* ColorPalette.swift */,
 			);
 			path = ColorPalette;
-			sourceTree = "<group>";
-		};
-		0D93FDA82234656F006C00F5 /* Font */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Font;
 			sourceTree = "<group>";
 		};
 		0D93FDA922346DC7006C00F5 /* Views */ = {
