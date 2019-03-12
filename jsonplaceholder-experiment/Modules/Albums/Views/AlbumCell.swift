@@ -13,7 +13,7 @@ struct AlbumCellTextAttributes {
 	public static var headline: [NSAttributedString.Key: Any] {
 		var attributes = [NSAttributedString.Key: Any]()
 		attributes[NSAttributedString.Key.font] = UIFont.preferredFont(forTextStyle: UIFont.TextStyle.title2)
-		attributes[NSAttributedString.Key.foregroundColor] = ColorPalette.Primary.Light.text
+		attributes[NSAttributedString.Key.foregroundColor] = ColorPalette.Secondary.tint
 		return attributes
 	}
 }

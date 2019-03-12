@@ -9,6 +9,12 @@
 import UIKit
 
 class BaseNavigationController: UINavigationController {
+	
+	override func viewDidLoad() {
+		super.viewDidLoad()
+		navigationBar.tintColor = ColorPalette.Secondary.tint
+	}
+	
 	// MARK: - Status Bar
 	override var childForStatusBarStyle: UIViewController? {
 		return topViewController

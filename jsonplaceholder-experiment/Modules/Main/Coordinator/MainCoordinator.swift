@@ -41,6 +41,12 @@ private extension MainCoordinator {
 		let controller = PhotosViewController(viewModel: viewModel)
 		navigationController.pushViewController(controller, animated: true)
 	}
+	
+	func displayDetail(of photo: Photo) {
+		let viewModel = DefaultPhotoDetailViewModel(with: photo)
+		let controller = PhotoDetailViewController(viewModel: viewModel)
+		navigationController.pushViewController(controller, animated: true)
+	}
 }
 
 // MARK: - PhotosViewModelDelegate
@@ -48,9 +54,8 @@ extension MainCoordinator: PhotosViewModelDelegate {
 	func photosViewModel(_ viewModel: PhotosViewModel,
 						 didTrigger action: PhotosViewModelDelegateAction) {
 		switch action {
-		case .didSelectPhoto:
-			// TODO: Open Photo Detail
-			break
+		case .didSelectPhoto( let photo):
+			displayDetail(of: photo)
 		}
 	}
 }

@@ -53,7 +53,7 @@ final class EmptyStateView: UIView {
 									bottom: Constants.defaultMargin,
 									right: Constants.defaultMargin)
 		label.font = UIFont.preferredFont(forTextStyle: UIFont.TextStyle.title3)
-		label.textColor = ColorPalette.Primary.Light.text
+		label.textColor = ColorPalette.Secondary.tint
 		label.textAlignment = .center
 		label.numberOfLines = 0
 		

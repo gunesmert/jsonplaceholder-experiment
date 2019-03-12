@@ -12,14 +12,14 @@ private struct NavigationBarTextAttributes {
 	public static var regular: [NSAttributedString.Key: Any] {
 		var attributes = [NSAttributedString.Key: Any]()
 		attributes[NSAttributedString.Key.font] = UIFont.preferredFont(forTextStyle: .headline)
-		attributes[NSAttributedString.Key.foregroundColor] = ColorPalette.Primary.Dark.text
+		attributes[NSAttributedString.Key.foregroundColor] = ColorPalette.Primary.tint
 		return attributes
 	}
 	
 	public static var large: [NSAttributedString.Key: Any] {
 		var attributes = [NSAttributedString.Key: Any]()
 		attributes[NSAttributedString.Key.font] = UIFont.preferredFont(forTextStyle: .largeTitle)
-		attributes[NSAttributedString.Key.foregroundColor] = ColorPalette.Primary.Dark.text
+		attributes[NSAttributedString.Key.foregroundColor] = ColorPalette.Primary.tint
 		return attributes
 	}
 }

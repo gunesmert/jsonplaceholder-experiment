@@ -10,16 +10,12 @@ import UIKit
 
 public struct ColorPalette {
 	public struct Primary {
-		public static let tint = UIColor.shamrock
+		public static let tint = UIColor.tropicalRainForest
 		public static let background = UIColor.concrete
-		
-		public struct Light {
-			public static let text = UIColor.monteCarlo
-		}
-		
-		public struct Dark {
-			public static let text = UIColor.shamrock
-		}
+	}
+	
+	public struct Secondary {
+		public static let tint = UIColor.observatory
 	}
 }
 
@@ -44,12 +40,12 @@ private extension UIColor {
 	Link: https://sipapp.io
 	*/
 	
-	static var shamrock: UIColor {
-		return UIColor(hexString: "#54D0A8")
+	static var observatory: UIColor {
+		return UIColor(hexString: "#008C72")
 	}
 	
-	static var monteCarlo: UIColor {
-		return UIColor(hexString: "#77CDAA")
+	static var tropicalRainForest: UIColor {
+		return UIColor(hexString: "#037368")
 	}
 	
 	static var concrete: UIColor {
