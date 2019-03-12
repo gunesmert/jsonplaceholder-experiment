@@ -38,10 +38,11 @@ extension EmptyStateMode: Equatable {
 
 final class EmptyStateView: UIView {
 	private lazy var illustrationImageView: UIImageView = {
-		let image = UIImage(named: "illustration-sloth")
+		let image = UIImage(named: "illustration-sloth")?.withRenderingMode(.alwaysTemplate)
 		let view = UIImageView(image: image)
 		view.backgroundColor = UIColor.clear
 		view.contentMode = UIView.ContentMode.center
+		view.tintColor = ColorPalette.Primary.tint
 		return view
 	}()
 	
@@ -55,6 +56,9 @@ final class EmptyStateView: UIView {
 		label.textColor = ColorPalette.Primary.Light.text
 		label.textAlignment = .center
 		label.numberOfLines = 0
+		
+		
+		
 		return label
 	}()
 	
@@ -110,4 +114,3 @@ final class EmptyStateView: UIView {
 		informationLabel.text = mode.information
 	}
 }
-

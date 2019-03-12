@@ -21,7 +21,7 @@ enum NetworkClientErrorType {
 		case .apiError(let error):
 			return error.localizedDescription
 		default:
-			return "An unknown error occurred. Please try again."
+			return NSLocalizedString("An unknown error occurred.", comment: "")
 		}
 	}
 }

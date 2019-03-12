@@ -33,14 +33,35 @@ final class MainCoordinator: Coordinator {
 	}
 }
 
+// MARK: - Redirection
+private extension MainCoordinator {
+	func displayPhotos(of album: Album) {
+		let viewModel = DefaultPhotosViewModel(with: repository, and: album)
+		viewModel.delegate = self
+		let controller = PhotosViewController(viewModel: viewModel)
+		navigationController.pushViewController(controller, animated: true)
+	}
+}
+
+// MARK: - PhotosViewModelDelegate
+extension MainCoordinator: PhotosViewModelDelegate {
+	func photosViewModel(_ viewModel: PhotosViewModel,
+						 didTrigger action: PhotosViewModelDelegateAction) {
+		switch action {
+		case .didSelectPhoto:
+			// TODO: Open Photo Detail
+			break
+		}
+	}
+}
+
 // MARK: - AlbumsViewModelDelegate
 extension MainCoordinator: AlbumsViewModelDelegate {
-	func albumsModelView(_ viewModel: AlbumsViewModel,
+	func albumsViewModel(_ viewModel: AlbumsViewModel,
 						 didTrigger action: AlbumsViewModelDelegateAction) {
 		switch action {
-		case .didSelectAlbum:
-			// TODO: Open Photos
-			break
+		case .didSelectAlbum(let album):
+			displayPhotos(of: album)
 		}
 	}
 }

@@ -21,6 +21,7 @@ final class AlbumsViewController: BaseTableViewController {
 	private var albums: [Album] = [] {
 		didSet {
 			componentsView.tableView.reloadData()
+			refreshControl.endRefreshing()
 		}
 	}
 	
@@ -32,13 +33,7 @@ final class AlbumsViewController: BaseTableViewController {
 	init(viewModel: AlbumsViewModel) {
 		self.viewModel = viewModel
 		super.init()
-		self.title = NSLocalizedString("Albums", comment: "")
-		
-		componentsView.tableView.register(AlbumCell.self,
-										  forCellReuseIdentifier: AlbumCell.identifier)
-		componentsView.tableView.delegate = self
-		componentsView.tableView.dataSource = self
-		componentsView.tableView.estimatedRowHeight = UITableView.automaticDimension
+		setupInterface()
 	}
 	
 	// MARK: - View Lifecycle
@@ -52,13 +47,16 @@ final class AlbumsViewController: BaseTableViewController {
 		bind(to: viewModel)
 		viewModel.inputs.refreshAlbums()
 	}
-	
-	// MARK: - ViewModel
+}
+
+// MARK: - ViewModel
+private extension AlbumsViewController {
 	private func bind(to viewModel: AlbumsViewModel) {
 		viewModel.outputs.componentsViewState
 			.subscribe(
 				onNext: { [weak self] state in
 					self?.componentsView.state = state
+					self?.refreshControl.endRefreshing()
 				}
 			)
 			.disposed(by: disposeBag)
@@ -71,8 +69,25 @@ final class AlbumsViewController: BaseTableViewController {
 			)
 			.disposed(by: disposeBag)
 	}
+}
+
+// MARK: - Configuration
+private extension AlbumsViewController {
+	private func setupInterface() {
+		self.title = NSLocalizedString("Albums", comment: "")
+		
+		componentsView.tableView.register(AlbumCell.self,
+										  forCellReuseIdentifier: AlbumCell.identifier)
+		componentsView.tableView.delegate = self
+		componentsView.tableView.dataSource = self
+		componentsView.tableView.estimatedRowHeight = UITableView.automaticDimension
+		componentsView.delegate = self
+		
+		refreshControl.addTarget(self,
+								 action: #selector(refresh(_:)),
+								 for: .valueChanged)
+	}
 	
-	// MARK: - Cell Configuration
 	private func configure(_ cell: AlbumCell, forRowAt indexPath: IndexPath) {
 		guard indexPath.row < albums.count else { return }
 		let album = albums[indexPath.row]
@@ -100,5 +115,19 @@ extension AlbumsViewController: UITableViewDataSource {
 extension AlbumsViewController: UITableViewDelegate {
 	func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
 		viewModel.inputs.selectedRecord(at: indexPath)
+	}
+}
+
+// MARK: - BaseComponentsViewDelegate
+extension AlbumsViewController: BaseComponentsViewDelegate {
+	func emptyStateViewDidReceiveTap(_ view: BaseComponentsView) {
+		viewModel.inputs.refreshAlbums()
+	}
+}
+
+// MARK: - Refresh
+private extension AlbumsViewController {
+	@objc func refresh(_ control: UIRefreshControl) {
+		viewModel.inputs.refreshAlbums()
 	}
 }

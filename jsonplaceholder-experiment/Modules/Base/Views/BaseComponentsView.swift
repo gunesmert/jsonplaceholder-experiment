@@ -15,7 +15,9 @@ enum BaseComponentsViewState {
 	case error(String)
 }
 
-class BaseComponentsView: UIView {
+final class BaseComponentsView: UIView {
+	weak var delegate: BaseComponentsViewDelegate?
+	
 	lazy var tableView: UITableView = {
 		let tableView = UITableView()
 		tableView.backgroundColor = ColorPalette.Primary.background
@@ -42,6 +44,11 @@ class BaseComponentsView: UIView {
 		let view = EmptyStateView()
 		view.backgroundColor = ColorPalette.Primary.background
 		view.isHidden = true
+		
+		let selector = #selector(didTapEmptyStateView(_:))
+		let recognizer = UITapGestureRecognizer(target: self, action: selector)
+		view.addGestureRecognizer(recognizer)
+		
 		return view
 	}()
 	
@@ -129,3 +136,14 @@ class BaseComponentsView: UIView {
 	}
 }
 
+// MARK: - Recognizers
+private extension BaseComponentsView {
+	@objc func didTapEmptyStateView(_ recognizer: UITapGestureRecognizer) {
+		delegate?.emptyStateViewDidReceiveTap(self)
+	}
+}
+
+// MARK: - BaseComponentsViewDelegate
+protocol BaseComponentsViewDelegate: class {
+	func emptyStateViewDidReceiveTap(_ view: BaseComponentsView)
+}

@@ -7,6 +7,7 @@ target 'jsonplaceholder-experiment' do
 	pod 'SnapKit'
 	pod 'RxSwift'
 	pod 'RxCocoa'
+	pod 'Kingfisher'
 
 end
 

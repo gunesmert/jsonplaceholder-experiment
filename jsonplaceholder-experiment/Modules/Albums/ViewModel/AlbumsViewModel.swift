@@ -62,12 +62,14 @@ final class DefaultAlbumsViewModel: AlbumsViewModel {
 	
 	// MARK: - Helper Methods
 	private func fetchAlbums() {
+		fetchedAlbums = []
 		componentsViewStateInput.onNext(.loading)
 		albumsReloadInput.onNext(())
 	}
 	
 	private func receivedError(_ error: Error) {
-		let state = BaseComponentsViewState.error(error.localizedDescription)
+		let message = error.localizedDescription + NSLocalizedString("\nPlease tap to try again.", comment: "")
+		let state = BaseComponentsViewState.error(message)
 		componentsViewStateInput.onNext(state)
 	}
 	
@@ -83,7 +85,7 @@ enum AlbumsViewModelDelegateAction {
 }
 
 protocol AlbumsViewModelDelegate: class {
-	func albumsModelView(_ viewModel: AlbumsViewModel, didTrigger action: AlbumsViewModelDelegateAction)
+	func albumsViewModel(_ viewModel: AlbumsViewModel, didTrigger action: AlbumsViewModelDelegateAction)
 }
 
 // MARK: - AlbumsViewModelInputs
@@ -101,7 +103,7 @@ extension DefaultAlbumsViewModel: AlbumsViewModelInputs {
 		guard indexPath.row < fetchedAlbums.count else { return }
 		let album = fetchedAlbums[indexPath.row]
 		let action = AlbumsViewModelDelegateAction.didSelectAlbum(album)
-		delegate?.albumsModelView(self, didTrigger: action)
+		delegate?.albumsViewModel(self, didTrigger: action)
 	}
 }
 
