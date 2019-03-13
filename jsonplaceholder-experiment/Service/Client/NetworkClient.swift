@@ -62,7 +62,7 @@ enum NetworkClientCommons {
 				return .error(NetworkClientError(type: .unauthorized))
 			}
 			
-			if let error = try? JSONDecoder.default.decode(APIError.self, from: data) {
+			if let error = try? JSONDecoder().decode(APIError.self, from: data) {
 				return .error(NetworkClientError(type: .apiError(error)))
 			}
 			

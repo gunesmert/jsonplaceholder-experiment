@@ -17,7 +17,7 @@ final class RootCoordinator: Coordinator {
 		return RootViewController()
 	}()
 	
-	// MARK: - Constructors
+	// MARK: - Initializers
 	init(with repository: Repository) {
 		self.repository = repository
 		activateMainCoordinator()

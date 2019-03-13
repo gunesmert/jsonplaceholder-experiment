@@ -27,7 +27,7 @@ final class MainCoordinator: Coordinator {
 		return controller
 	}()
 	
-	// MARK: - Constructors
+	// MARK: - Initializers
 	init(with repository: Repository) {
 		self.repository = repository
 	}

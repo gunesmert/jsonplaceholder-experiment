@@ -9,14 +9,14 @@
 import UIKit
 
 private struct NavigationBarTextAttributes {
-	public static var regular: [NSAttributedString.Key: Any] {
+	static var regular: [NSAttributedString.Key: Any] {
 		var attributes = [NSAttributedString.Key: Any]()
 		attributes[NSAttributedString.Key.font] = UIFont.preferredFont(forTextStyle: .headline)
 		attributes[NSAttributedString.Key.foregroundColor] = ColorPalette.Primary.tint
 		return attributes
 	}
 	
-	public static var large: [NSAttributedString.Key: Any] {
+	static var large: [NSAttributedString.Key: Any] {
 		var attributes = [NSAttributedString.Key: Any]()
 		attributes[NSAttributedString.Key.font] = UIFont.preferredFont(forTextStyle: .largeTitle)
 		attributes[NSAttributedString.Key.foregroundColor] = ColorPalette.Primary.tint
@@ -25,20 +25,19 @@ private struct NavigationBarTextAttributes {
 }
 
 final class MainNavigationController: BaseNavigationController {
-	// MARK: - Constructors
+	// MARK: - Initializers
 	required init?(coder aDecoder: NSCoder) {
 		fatalError("init(coder:) has not been implemented")
 	}
 	
 	override init(rootViewController: UIViewController) {
 		super.init(rootViewController: rootViewController)
-		
 	}
 	
 	override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
 		super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
 		navigationBar.prefersLargeTitles = true
-		navigationItem.largeTitleDisplayMode = .automatic
+		navigationItem.largeTitleDisplayMode = .always
 		
 		navigationBar.largeTitleTextAttributes = NavigationBarTextAttributes.large
 		navigationBar.titleTextAttributes = NavigationBarTextAttributes.regular

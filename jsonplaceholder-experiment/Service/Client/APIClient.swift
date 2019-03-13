@@ -16,7 +16,7 @@ protocol APIClient {
 
 private enum Path: String {
 	case albums	= "/albums"
-	case photos	= "/albums/%d/photos"
+	case photos	= "/photos"
 }
 
 struct DefaultAPIClient: APIClient {
@@ -33,9 +33,14 @@ struct DefaultAPIClient: APIClient {
 	}
 	
 	func fetchPhotos(of album: Album) -> Single<Data> {
-		let path = String(format: Path.photos.rawValue, album.id)
-		let endpoint = DefaultAPIEndpoint(path: path,
-										  httpMethod: HttpMethod.get)
+		var queryParameters = [String: Any]()
+		queryParameters["albumId"] = album.id
+		
+		let parameters = Parameters.query(queryParameters)
+		let endpoint = DefaultAPIEndpoint(path: Path.photos.rawValue,
+										  httpMethod: HttpMethod.get,
+										  parameters: parameters,
+										  headerParameters: nil)
 		return networkClient.fetch(endpoint)
 	}
 }

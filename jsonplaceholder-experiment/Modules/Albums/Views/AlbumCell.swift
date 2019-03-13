@@ -33,21 +33,28 @@ final class AlbumCell: UITableViewCell {
 	override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
 		super.init(style: style, reuseIdentifier: reuseIdentifier)
 		selectionStyle = .none
-		
+		setupInterface()
+	}
+}
+
+// MARK: - Layout Setup
+private extension AlbumCell {
+	struct LayoutConstants {
+		static var verticalMargin: CGFloat = 20.0
+		static var horizontalMargin: CGFloat = Constants.defaultMargin
+	}
+	
+	func setupInterface() {
 		contentView.addSubview(titleLabel)
+		layoutConstraints()
+	}
+	
+	func layoutConstraints() {
 		titleLabel.snp.makeConstraints { make in
 			make.top.equalToSuperview().inset(LayoutConstants.verticalMargin)
 			make.leading.trailing.equalToSuperview().inset(LayoutConstants.horizontalMargin)
 			make.bottom.equalToSuperview().inset(LayoutConstants.verticalMargin).priority(999)
 		}
-	}
-}
-
-// MARK: - Layout Constants
-private extension AlbumCell {
-	struct LayoutConstants {
-		static var verticalMargin: CGFloat = 20.0
-		static var horizontalMargin: CGFloat = Constants.defaultMargin
 	}
 }
 

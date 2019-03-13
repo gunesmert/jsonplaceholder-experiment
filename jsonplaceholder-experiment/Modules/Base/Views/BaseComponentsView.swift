@@ -100,9 +100,11 @@ final class BaseComponentsView: UIView {
 			make.center.equalToSuperview()
 		}
 	}
-	
-	// MARK: - Interface
-	private func updateInterface() {
+}
+
+// MARK: - Interface
+private extension BaseComponentsView {
+	func updateInterface() {
 		tableView.contentInset = contentInset
 		tableView.scrollIndicatorInsets = contentInset
 		
@@ -115,7 +117,7 @@ final class BaseComponentsView: UIView {
 		}
 	}
 	
-	private func updateInterface(with state: BaseComponentsViewState) {
+	func updateInterface(with state: BaseComponentsViewState) {
 		switch state {
 		case .idle:
 			activityIndicatorHolderView.isHidden = true

@@ -20,7 +20,6 @@
 		0D93FD7B2233FB64006C00F5 /* NetworkHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D93FD7A2233FB64006C00F5 /* NetworkHelpers.swift */; };
 		0D93FD7D2233FB96006C00F5 /* NetworkClientError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D93FD7C2233FB96006C00F5 /* NetworkClientError.swift */; };
 		0D93FD7F2233FBD0006C00F5 /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D93FD7E2233FBD0006C00F5 /* APIError.swift */; };
-		0D93FD842233FE59006C00F5 /* JSONDecoderExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D93FD832233FE59006C00F5 /* JSONDecoderExtensions.swift */; };
 		0D93FD86223400AB006C00F5 /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D93FD85223400AB006C00F5 /* Repository.swift */; };
 		0D93FD88223400E3006C00F5 /* Album.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D93FD87223400E3006C00F5 /* Album.swift */; };
 		0D93FD8A2234015D006C00F5 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D93FD892234015D006C00F5 /* APIClient.swift */; };
@@ -63,7 +62,6 @@
 		0D93FD7A2233FB64006C00F5 /* NetworkHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkHelpers.swift; sourceTree = "<group>"; };
 		0D93FD7C2233FB96006C00F5 /* NetworkClientError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkClientError.swift; sourceTree = "<group>"; };
 		0D93FD7E2233FBD0006C00F5 /* APIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
-		0D93FD832233FE59006C00F5 /* JSONDecoderExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONDecoderExtensions.swift; sourceTree = "<group>"; };
 		0D93FD85223400AB006C00F5 /* Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
 		0D93FD87223400E3006C00F5 /* Album.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Album.swift; sourceTree = "<group>"; };
 		0D93FD892234015D006C00F5 /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
@@ -327,7 +325,6 @@
 		0D93FD802233FC43006C00F5 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				0D93FD832233FE59006C00F5 /* JSONDecoderExtensions.swift */,
 				0D93FD8D22340596006C00F5 /* MaterializedExtensions.swift */,
 				0D93FDA622343679006C00F5 /* StaticallyIdentifiable.swift */,
 			);
@@ -354,9 +351,9 @@
 			isa = PBXGroup;
 			children = (
 				0D93FD6B2233F7D3006C00F5 /* BaseNavigationController.swift */,
+				0D93FDBF223828AA006C00F5 /* BaseScrollViewController.swift */,
 				0D93FD95223433B0006C00F5 /* BaseTableViewController.swift */,
 				0D93FD582233F5FF006C00F5 /* BaseViewController.swift */,
-				0D93FDBF223828AA006C00F5 /* BaseScrollViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -630,7 +627,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				0D93FD7B2233FB64006C00F5 /* NetworkHelpers.swift in Sources */,
-				0D93FD842233FE59006C00F5 /* JSONDecoderExtensions.swift in Sources */,
 				0D93FD9422340681006C00F5 /* AlbumsViewModel.swift in Sources */,
 				0D93FDBE2238286A006C00F5 /* PhotoDetailViewController.swift in Sources */,
 				0D93FD6C2233F7D3006C00F5 /* BaseNavigationController.swift in Sources */,

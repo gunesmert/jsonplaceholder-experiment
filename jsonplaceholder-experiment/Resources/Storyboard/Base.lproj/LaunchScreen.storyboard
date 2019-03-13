@@ -43,7 +43,6 @@ experiment</string>
                             <constraint firstItem="kBK-58-9yh" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="Uh9-XH-EfP"/>
                             <constraint firstItem="kBK-58-9yh" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="ZQM-vj-UeU"/>
                             <constraint firstItem="3lv-mv-b0q" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="abp-ny-K7g"/>
-                            <constraint firstItem="kBK-58-9yh" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="odL-gc-Ujd"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="kBK-58-9yh" secondAttribute="trailing" constant="16" id="p2Q-Yl-x3X"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>

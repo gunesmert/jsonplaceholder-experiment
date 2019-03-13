@@ -23,26 +23,13 @@ enum EmptyStateMode {
 	}
 }
 
-extension EmptyStateMode: Equatable {
-	static func ==(lhs: EmptyStateMode, rhs: EmptyStateMode) -> Bool {
-		switch (lhs, rhs) {
-		case (.noResults, .noResults):
-			return true
-		case (.custom, .custom):
-			return lhs.information == rhs.information
-		default:
-			return false
-		}
-	}
-}
-
 final class EmptyStateView: UIView {
 	private lazy var illustrationImageView: UIImageView = {
 		let image = UIImage(named: "illustration-sloth")?.withRenderingMode(.alwaysTemplate)
 		let view = UIImageView(image: image)
-		view.backgroundColor = UIColor.clear
-		view.contentMode = UIView.ContentMode.center
-		view.tintColor = ColorPalette.Primary.tint
+		view.backgroundColor = ColorPalette.Primary.background
+		view.contentMode = .center
+		view.tintColor = ColorPalette.Secondary.tint
 		return view
 	}()
 	
@@ -52,27 +39,24 @@ final class EmptyStateView: UIView {
 									left: Constants.defaultMargin,
 									bottom: Constants.defaultMargin,
 									right: Constants.defaultMargin)
-		label.font = UIFont.preferredFont(forTextStyle: UIFont.TextStyle.title3)
+		label.font = UIFont.preferredFont(forTextStyle: .title3)
 		label.textColor = ColorPalette.Secondary.tint
 		label.textAlignment = .center
 		label.numberOfLines = 0
-		
-		
-		
 		return label
 	}()
 	
 	private lazy var contentView: UIStackView = {
 		let view = UIStackView()
-		view.distribution = UIStackView.Distribution.fillProportionally
-		view.axis = NSLayoutConstraint.Axis.vertical
+		view.distribution = .fillProportionally
+		view.axis = .vertical
 		view.spacing = Constants.defaultMargin
 		return view
 	}()
 	
 	var mode = EmptyStateMode.noResults {
 		didSet {
-			updateInterface()
+			updateInterface(with: mode)
 		}
 	}
 	
@@ -108,9 +92,11 @@ final class EmptyStateView: UIView {
 		contentView.addArrangedSubview(illustrationImageView)
 		contentView.addArrangedSubview(informationLabel)
 	}
-	
-	// MARK: - Interface
-	private func updateInterface() {
+}
+
+// MARK: - Configuration
+extension EmptyStateView {
+	private func updateInterface(with mode: EmptyStateMode) {
 		informationLabel.text = mode.information
 	}
 }

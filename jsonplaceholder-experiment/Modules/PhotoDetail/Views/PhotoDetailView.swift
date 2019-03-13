@@ -27,7 +27,7 @@ final class PhotoDetailView: UIView {
 		return label
 	}()
 	
-	// MARK: - Constructors
+	// MARK: - Initializers
 	required init?(coder aDecoder: NSCoder) {
 		fatalError("init(coder:) has not been implemented")
 	}
@@ -71,7 +71,6 @@ private extension PhotoDetailView {
 extension PhotoDetailView {
 	func configure(with photo: Photo) {
 		imageView.image = nil
-		
 		if let url = URL(string: photo.url) {
 			imageView.kf.setImage(with: url)
 		}

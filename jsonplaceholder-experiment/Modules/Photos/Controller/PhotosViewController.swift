@@ -14,9 +14,7 @@ import RxCocoa
 final class PhotosViewController: BaseTableViewController {
 	private let viewModel: PhotosViewModel
 	
-	override var canPullToRefresh: Bool {
-		return true
-	}
+	override var canPullToRefresh: Bool { return true }
 	
 	private var photos: [Photo] = [] {
 		didSet {
@@ -52,9 +50,11 @@ final class PhotosViewController: BaseTableViewController {
 		bind(to: viewModel)
 		viewModel.inputs.refreshPhotos()
 	}
-	
-	// MARK: - ViewModel
-	private func bind(to viewModel: PhotosViewModel) {
+}
+
+// MARK: - ViewModel
+private extension PhotosViewController {
+	func bind(to viewModel: PhotosViewModel) {
 		viewModel.outputs.componentsViewState
 			.subscribe(
 				onNext: { [weak self] state in
@@ -71,9 +71,11 @@ final class PhotosViewController: BaseTableViewController {
 			)
 			.disposed(by: disposeBag)
 	}
-	
-	// MARK: - Cell Configuration
-	private func configure(_ cell: PhotoCell, forRowAt indexPath: IndexPath) {
+}
+
+// MARK: - Configuration
+private extension PhotosViewController {
+	func configure(_ cell: PhotoCell, forRowAt indexPath: IndexPath) {
 		guard indexPath.row < photos.count else { return }
 		let photo = photos[indexPath.row]
 		cell.configure(with: photo)

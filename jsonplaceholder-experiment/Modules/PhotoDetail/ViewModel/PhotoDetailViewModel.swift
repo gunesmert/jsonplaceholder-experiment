@@ -21,7 +21,7 @@ final class DefaultPhotoDetailViewModel: PhotoDetailViewModel {
 	private var photoInput = PublishSubject<Photo>()
 	private let originalPhoto: Photo
 	
-	// MARK: - Constructors
+	// MARK: - Initializers
 	init(with photo: Photo) {
 		self.originalPhoto = photo
 	}
